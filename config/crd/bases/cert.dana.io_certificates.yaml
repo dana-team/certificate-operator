@@ -95,6 +95,8 @@ spec:
                   name:
                     description: Name of the CertificateConfig.
                     type: string
+                required:
+                - name
                 type: object
               secretName:
                 description: SecretName is the name of the Kubernetes Secret where
@@ -179,6 +181,10 @@ spec:
                 type: string
               issuer:
                 description: Issuer is the entity that issued the certificate.
+                type: string
+              secretName:
+                description: SecretName is the name of the Kubernetes Secret where
+                  the extracted certificate is stored.
                 type: string
               signatureHashAlgorithm:
                 description: SignatureHashAlgorithm is the algorithm used to sign
